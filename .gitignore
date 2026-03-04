@@ -1,0 +1,118 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+backend/venv/
+backend/env/
+backend/ENV/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Environment Variables - CRITICAL! NEVER COMMIT API KEYS!
+.env
+*.env
+.env.local
+.env.*.local
+backend/.env
+.env.production
+.env.development
+
+# API Keys and Secrets
+secrets.py
+credentials.json
+api_keys.txt
+config.py
+*.key
+*.pem
+
+# Data Files (uncomment these lines if you want to keep transcripts private)
+# Data/
+# Data/Transcripts/*.md
+# *.csv
+# *.xlsx
+# *.pdf
+# *.docx
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+$RECYCLE.BIN/
+.AppleDouble
+.LSOverride
+
+# Docker - Milvus Data Volumes (IMPORTANT - DO NOT COMMIT!)
+docker/volumes/
+volumes/
+milvus_data/
+docker-data/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+*.bak
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/

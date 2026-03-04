@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  milvus:
+    image: milvusdb/milvus:v2.3.3 
+    container_name: milvus 
+    command: ["milvus", "run", "standalone"] 
+    environment:
+      ETCD_USE_EMBED: "true"
+      COMMON_STORAGETYPE: "local" 
+    ports:
+      - "19530:19530"  
+    volumes:
+      - ./volumes:/var/lib/milvus
+      

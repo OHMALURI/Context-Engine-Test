@@ -1,0 +1,4 @@
+openai
+pymilvus
+python-dotenv
+numpy
