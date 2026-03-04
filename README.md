@@ -12,26 +12,8 @@ RAG system for processing meeting transcripts using vector embeddings and semant
 
 ## Project Structure
 
-Context-Engine-Test/
-├── backend/
-│   ├── scripts/
-│   │   ├── ingestion/
-│   │   │   └── transcript_ingest.py    # Main pipeline
-│   │   ├── parsing/
-│   │   │   └── transcript_parser.py    # Parse markdown
-│   │   └── vector_store/
-│   │       ├── chunking.py             # Split into chunks
-│   │       ├── embeddings.py           # Generate embeddings
-│   │       └── milvus_client.py        # Database client
-│   ├── test_parser.py
-│   ├── .env (not tracked)
-│   └── venv/ (not tracked)
-├── Data/
-│   └── Transcripts/                    # Your .md files
-├── docker/
-│   ├── docker-compose.yml
-│   └── volumes/ (not tracked)
-└── requirements.txt
+<img width="597" height="511" alt="image" src="https://github.com/user-attachments/assets/a37a181e-8453-4de2-b67e-3f9ffaef609f" />
+
 
 ## Setup
 
