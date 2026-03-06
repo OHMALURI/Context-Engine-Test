@@ -5,8 +5,8 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 from scripts.parsing.transcript_parser import parse_transcript
-from scripts.vector_store.chunking import chunk_transcript
-from scripts.vector_store.embeddings import embed_texts, prepare_for_embedding
+from scripts.chunking.transcript_chunking import chunk_transcript
+from scripts.embedding.transcript_embedding import embed_texts, prepare_for_embedding
 from scripts.vector_store.milvus_client import get_collection
 
 
@@ -88,7 +88,7 @@ def main():
     # Store in Milvus
     # -----------------------------
     print("\n🔹 Connecting to Milvus...")
-    collection = get_collection()
+    collection = get_collection("transcript_embeddings")
 
     print("Inserting into Milvus...")
     collection.insert([vectors, all_prepared_chunks])
