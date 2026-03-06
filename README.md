@@ -197,39 +197,6 @@ docker-compose restart
 docker-compose logs -f
 ```
 
-**Port**: `localhost:19530`  
-**Data**: Stored in `docker/volumes/` (not in Git)
-
-## 🗄️ Database Schema
-
-**Collection**: `meeting_embeddings`
-
-| Field | Type | Description |
-|-------|------|-------------|
-| id | INT64 | Auto-generated |
-| embedding | FLOAT_VECTOR[1536] | Semantic vector |
-| text | VARCHAR(5000) | Chunk with metadata |
-
-## 📦 Dependencies
-```
-openai
-pymilvus
-python-dotenv
-numpy
-🐛 Troubleshooting
-Milvus connection error:
-bashdocker-compose restart
-OpenAI API error:
-
-Check API key in .env
-Verify credits: https://platform.openai.com/usage
-
-Reset Milvus:
-bashdocker-compose down
-rm -rf volumes/
-docker-compose up -d
-🔐 Security
-⚠️ Never commit:
 
 backend/.env (API keys)
 backend/venv/ (virtual environment)
