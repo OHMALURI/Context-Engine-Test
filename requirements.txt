@@ -2,3 +2,6 @@ openai
 pymilvus
 python-dotenv
 numpy
+pymupdf
+python-docx
+python-pptx

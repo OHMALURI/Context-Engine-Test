@@ -28,7 +28,7 @@ print(chunks[0]["text"])
 print("\nMetadata:\n", chunks[0]["metadata"])
 
 
-from scripts.vector_store.embeddings import prepare_for_embedding, embed_texts
+from backend.scripts.embedding.transcript_embedding import prepare_for_embedding, embed_texts
 
 texts = [prepare_for_embedding(chunk) for chunk in chunks]
 

@@ -7,11 +7,11 @@ from pymilvus import (
     utility
 )
 
-COLLECTION_NAME = "meeting_embeddings"
-DIMENSION = 1536  # text-embedding-3-small
+DIMENSION = 1536   # text-embedding-3-small
 
 
-def get_collection():
+def get_collection(collection_name):
+    
     # Connect to Milvus
     connections.connect(
         alias="default",
@@ -19,9 +19,9 @@ def get_collection():
         port="19530"
     )
 
-    # If collection already exists → load it
-    if utility.has_collection(COLLECTION_NAME):
-        collection = Collection(COLLECTION_NAME)
+    # If collection exists → load it
+    if utility.has_collection(collection_name):
+        collection = Collection(collection_name)
         collection.load()
         return collection
 
@@ -47,15 +47,15 @@ def get_collection():
 
     schema = CollectionSchema(
         fields=fields,
-        description="Meeting transcript embeddings"
+        description="Document embeddings"
     )
 
     collection = Collection(
-        name=COLLECTION_NAME,
+        name=collection_name,
         schema=schema
     )
 
-    # Create index for fast search
+    # Create index
     index_params = {
         "metric_type": "L2",
         "index_type": "IVF_FLAT",
